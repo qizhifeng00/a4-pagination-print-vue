@@ -45,6 +45,14 @@
     "page-break"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qizhifeng00/a4-pagination-print-vue"
+  },
+  "homepage": "https://github.com/qizhifeng00/a4-pagination-print-vue#readme",
+  "bugs": {
+    "url": "https://github.com/qizhifeng00/a4-pagination-print-vue/issues"
+  },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.0",
     "echarts": "^6.1.0",

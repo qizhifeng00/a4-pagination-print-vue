@@ -1,5 +1,8 @@
 # @a4-pagination-print/vue
 
+[![npm version](https://img.shields.io/npm/v/@a4-pagination-print/vue)](https://www.npmjs.com/package/@a4-pagination-print/vue)
+[![license](https://img.shields.io/npm/l/@a4-pagination-print/vue)](https://github.com/qizhifeng00/a4-pagination-print-vue/blob/main/LICENSE)
+
 A4 分页 — Vue 3 组件与 Composables，用于在浏览器中渲染和打印 A4 报表页。
 
 ```bash
