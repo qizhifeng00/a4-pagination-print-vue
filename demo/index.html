@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A4 Vue 3 Demo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @media print {
+      html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .app-root {
+        min-height: auto !important;
+        background: none !important;
+      }
+      /* 隐藏 UI 装饰 */
+      .app-header,
+      .app-footer,
+      .a4-report > h2,
+      .a4-report > div:not(.a4-container) {
+        display: none !important;
+      }
+      /* 隐藏非 active 页 */
+      .a4-page:not(.a4-page--active) {
+        display: none !important;
+      }
+      /* 用 mm 单位覆盖，与 @page 精确对齐 */
+      .a4-page--active {
+        width: 210mm !important;
+        height: 297mm !important;
+        padding: 5mm 8mm 5mm 8mm !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+        box-shadow: none !important;
+        page-break-after: avoid !important;
+        overflow: hidden !important;
+      }
+      .a4-page--active .a4-page-content {
+        width: 194mm !important;
+        height: 280mm !important;
+      }
+      .a4-page--active .a4-page-header {
+        font-size: 7.5px !important;
+        margin-bottom: 0.5mm !important;
+        padding-bottom: 0.5mm !important;
+        color: #999 !important;
+        border-bottom: 0.5px solid #e0e0e0 !important;
+      }
+      .a4-page--active .a4-page-footer {
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 0.5mm !important;
+        padding-top: 0 !important;
+        border-top: 0.5px solid #e0e0e0 !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #333 !important;
+      }
+      /* ---- Block 样式全部对齐 PDF html-builder ---- */
+      /* 表格 */
+      #app .a4-block--table {
+        margin-bottom: 2mm !important;
+      }
+      #app .a4-block--table table {
+        font-size: 10px !important;
+      }
+      #app .a4-block--table th {
+        padding: 1mm 2mm !important;
+        border: 0.5px solid #ddd !important;
+        font-size: 10px !important;
+      }
+      #app .a4-block--table td {
+        padding: 0.8mm 2mm !important;
+        border: 0.5px solid #eee !important;
+        font-size: 10px !important;
+      }
+      /* 文本块 */
+      #app .a4-block--text {
+        margin-bottom: 2mm !important;
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+      }
+      /* 输入框 */
+      #app .a4-block--input {
+        margin-bottom: 2mm !important;
+      }
+      #app .a4-block--input textarea {
+        font-size: 10px !important;
+        padding: 1mm 2mm !important;
+        border: 0.5px solid #ddd !important;
+      }
+      #app .a4-block--input label {
+        font-size: 10px !important;
+        margin-bottom: 1mm !important;
+      }
+      /* 图表 */
+      #app .a4-block--chart {
+        margin-bottom: 2mm !important;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module">
+    import { createApp } from 'vue';
+    import App from './App.vue';
+    createApp(App).mount('#app');
+  </script>
+</body>
+</html>

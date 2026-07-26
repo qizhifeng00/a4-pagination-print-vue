@@ -1,0 +1,56 @@
+{
+  "name": "@a4-pagination-print/vue",
+  "version": "0.1.0",
+  "description": "A4 pagination — Vue 3 components and composables",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "vue-tsc -p tsconfig.json && vite build --config vite.config.lib.ts",
+    "dev": "vite",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@a4-pagination-print/core": "^0.1.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0",
+    "echarts": "^5.0.0 || ^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "echarts": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "a4",
+    "pagination",
+    "vue",
+    "pdf",
+    "report",
+    "page-break"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.0",
+    "echarts": "^6.1.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0",
+    "vue": "^3.4.0",
+    "vue-tsc": "^2.0.0"
+  }
+}
