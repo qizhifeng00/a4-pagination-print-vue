@@ -1,6 +1,6 @@
 {
   "name": "@a4-pagination-print/vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A4 pagination — Vue 3 components and composables",
   "type": "module",
   "main": "./dist/index.cjs",
